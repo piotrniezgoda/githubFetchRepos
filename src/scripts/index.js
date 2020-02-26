@@ -58,7 +58,8 @@ import {renderResoult, renderContainer} from './renderResoult';
   searchBtn.addEventListener('click', showData);
   searchForm.addEventListener('submit', showData);
   logoImage.addEventListener('click', () => {
-    renderContainer.innerHTML = '';
+    initialAssets();
+    searchInput.value = '';
   });
   document.addEventListener('keyup', (e) => {
     if(e.keyCode === 8 && searchInput.value === '') {
