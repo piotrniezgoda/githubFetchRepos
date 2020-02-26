@@ -3,18 +3,28 @@
   padding: 2.5rem 0.93rem 2.5rem 2.5rem;
   box-shadow: 1px 0px 16px rgba(0, 0, 0, 0.17);
   height: 37.5rem;
+  border-radius: 10px;
+
+  @media (max-width: 500px) {
+    padding: 1rem 0.3rem 0.3rem 1rem;
+  }
 }
 
 .resoultsGrid {
   padding-right: 0.93rem;
   height: 100%;
-  border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr;
   grid-column-gap: 1.25rem;
   grid-row-gap: 1.125rem;
   overflow-y: scroll;
+  position:relative;
+
+
+  @media (max-width:827px) {
+    grid-template-columns: 1fr;
+  }
 
   &::-webkit-scrollbar {
     width: 0.25rem;
@@ -34,16 +44,27 @@
 
 .repo {
   background: $repoBg;
-  height: 8.125rem;
   display: flex;
   border-radius: 10px;
   padding: 1.5rem 1.875rem;
   justify-content: space-between;
   align-items: center;
 
+  @media(max-width:500px) {
+    padding: 1.5rem 0.875rem;
+  }
+
+  @media(max-width: 475px) {
+    flex-direction: column;
+  }
+
   &__info {
     margin-right: 1.25rem;
-    flex: 2 1 70%
+    flex: 2 1 70%;
+    @media(max-width: 475px) {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
   }
 
   &__title {
@@ -51,6 +72,10 @@
     font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 4px;
+
+    @media(max-width: 475px) {
+     text-align: center;
+    }
   }
 
   &__desc {
@@ -91,6 +116,11 @@
     flex-shrink: 0;
     overflow: hidden;
     margin-right: 1.25rem;
+
+    @media(max-width: 475px) {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
     > img {
       object-fit: cover;
       width: 100%;
@@ -141,4 +171,12 @@
   transform: translate(-50%, -50%);
   font-size: 1.3rem;
   color: #dc1e87;;
+}
+
+.arrow-typeHere {
+  position: absolute;
+  top: 0;
+  right: 7rem;
+  width: 50%;
+  opacity: 0.5;
 }
