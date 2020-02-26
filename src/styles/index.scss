@@ -1,0 +1,21 @@
+@import './_reset.css';
+@import './_variables.scss';
+@import './_header.scss';
+@import './_main.scss';
+
+
+body, html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+}
+
+.siteContainer {
+  width: 100%;
+  max-width: 75rem;
+  padding: 30px 10px;
+  margin: 0 auto;
+}
+
+
+
+

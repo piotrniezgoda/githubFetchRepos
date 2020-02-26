@@ -1,0 +1,95 @@
+.header__logo {
+  display: block;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+  }
+}
+
+.header__title {
+  font-size: 3rem;
+  color: $titleColor;
+  font-weight: 700;
+}
+
+.header__container {
+  width: 100%;
+  margin-top: 47px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.header__searchForm {
+  position: relative;
+}
+
+.header__search-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #304389;
+  margin-bottom: 2px;
+  padding-left: 6px;
+}
+
+.header__search-input {
+  width: 398px;
+  font-size: 1.125rem;
+  border: 2px solid #F1F4FF;
+  border-radius: 10px;
+  color: $textColor;
+  padding: 10px 46px 10px 10px;
+  transition: border 0.6s;
+
+
+  &:focus {
+    outline: none;
+    border: 2px solid $titleColor;
+    transition: border 0.6s;
+  }
+}
+
+.searchArrow {
+  fill: #F1F4FF;
+  transition: 0.4s;
+}
+
+.header__search-button { 
+    background: none;
+    outline: none;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    padding: 3px;
+    transform: translateY(-4px);
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover .searchArrow, &:focus .searchArrow{
+      fill: #A5B8FF;
+      transition: 0.4s;
+    }
+}
+
+/* clears the 'X' from Internet Explorer */
+.header__search-input::-ms-clear,
+.header__search-input::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* clears the 'X' from Chrome */
+.header__search-input::-webkit-search-decoration,
+.header__search-input::-webkit-search-cancel-button,
+.header__search-input::-webkit-search-results-button,
+.header__search-input::-webkit-search-results-decoration {
+  display: none;
+}
