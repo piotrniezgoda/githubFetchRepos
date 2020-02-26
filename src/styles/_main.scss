@@ -170,7 +170,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 1.3rem;
-  color: #dc1e87;;
+  color: #dc1e87;
+  width: 100%;
+  text-align: center;
+
+  @media(max-width:750px) {
+    font-size: 1rem;
+    top: 25%;
+  }
 }
 
 .arrow-typeHere {
